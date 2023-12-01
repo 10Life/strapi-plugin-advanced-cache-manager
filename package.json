@@ -1,0 +1,38 @@
+{
+  "name": "@10life/strapi-plugin-advanced-cache-manager",
+  "version": "1.0.1",
+  "description": "A Cache Management for Strapi.",
+  "strapi": {
+    "name": "Advanced Cache Manager",
+    "description": "A Cache Management for Strapi.",
+    "kind": "plugin",
+    "displayName": "Advanced Cache Manager"
+  },
+  "files": [
+    "admin",
+    "server",
+    "strapi-admin.js",
+    "strapi-server.js"
+  ],
+  "dependencies": {
+    "apollo-server-cache-redis": "3.3.1",
+    "apollo-server-core": "3.12.1",
+    "apollo-server-plugin-response-cache": "3.8.2",
+    "aws-sdk": "^2.1305.0"
+  },
+  "peerDependencies": {
+    "@strapi/strapi": "^4.4.0"
+  },
+  "author": {
+    "name": "Roy To"
+  },
+  "maintainers": [
+    {
+      "name": "Roy To"
+    }
+  ],
+  "engines": {
+    "npm": ">=6.0.0"
+  },
+  "license": "MIT"
+}
