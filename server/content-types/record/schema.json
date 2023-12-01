@@ -1,0 +1,32 @@
+{
+  "kind": "collectionType",
+  "collectionName": "record",
+  "info": {
+    "singularName": "record",
+    "pluralName": "records",
+    "displayName": "Cache Purge Record"
+  },
+  "options": {
+    "draftAndPublish": false,
+    "comment": ""
+  },
+  "attributes": {
+    "cacheType": {
+      "type": "enumeration",
+      "enum": [
+        "short_cache",
+        "purge_all",
+        "purge_cdn"
+      ]
+    },
+    "items": {
+      "type": "string"
+    },    
+    "invalidationId": {
+      "type": "string"
+    },
+    "status": {
+      "type": "string"
+    }
+  }
+}
