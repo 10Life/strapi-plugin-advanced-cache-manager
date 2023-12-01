@@ -3,7 +3,7 @@
   "version": "1.0.2",
   "description": "A Cache Management for Strapi.",
   "strapi": {
-    "name": "Advanced Cache Manager",
+    "name": "advanced-cache-manager",
     "description": "A Cache Management for Strapi.",
     "kind": "plugin",
     "displayName": "Advanced Cache Manager"
