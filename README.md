@@ -8,7 +8,6 @@ This plugin allows Strapi users to invalidate the cache according to the cache t
 # How to use
 Put this at the top of `/config/plugins.js`:
 ```
-const InMemoryLRUCache = require('@apollo/utils.keyvaluecache').InMemoryLRUCache;
 const { RedisCache } = require('apollo-server-cache-redis');
 const apolloServerPluginResponseCache = require('apollo-server-plugin-response-cache').default;
 const ApolloServerPluginCacheControl = require('apollo-server-core').ApolloServerPluginCacheControl;
