@@ -121,12 +121,13 @@ Install dependencies:
 npm install
 ```
 
-Now we need to register plugin so strapi can use it. In order to do that we need to create (if not already created) ./config/plugins.js file and add entry to it. (Follow How to use section) Plus the follwing line
+Now we need to register plugin so strapi can use it. In order to do that we need to create (if not already created) `./config/plugins.js` file and add entry to it. (Follow How to use section)
 ```
 module.exports = ({ env }) => ({
   "advanced-cache-manager": {
     enabled: true,
-    resolve: "./src/plugins/advanced-cache-manager"
+    // add this line
+    resolve: "./src/plugins/strapi-plugin-advanced-cache-manager
     // rest of the configuration
   },
 });
