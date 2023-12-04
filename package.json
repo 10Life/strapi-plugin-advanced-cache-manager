@@ -1,13 +1,23 @@
 {
   "name": "@10life/strapi-plugin-advanced-cache-manager",
-  "version": "1.0.1",
+  "version": "1.0.3",
   "description": "A Cache Management for Strapi.",
   "strapi": {
-    "name": "Advanced Cache Manager",
+    "name": "advanced-cache-manager",
     "description": "A Cache Management for Strapi.",
     "kind": "plugin",
     "displayName": "Advanced Cache Manager"
   },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/10Life/strapi-plugin-advanced-cache-manager.git"
+  },
+  "keywords": [
+    "strapi",
+    "cache",
+    "graphql",
+    "cdn"
+  ],
   "files": [
     "admin",
     "server",
