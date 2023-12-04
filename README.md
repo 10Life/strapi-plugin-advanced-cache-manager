@@ -8,7 +8,6 @@ This plugin allows Strapi users to invalidate the cache according to the cache t
 # How to use
 Put this at the top of `/config/plugins.js`:
 ```
-const InMemoryLRUCache = require('@apollo/utils.keyvaluecache').InMemoryLRUCache;
 const { RedisCache } = require('apollo-server-cache-redis');
 const apolloServerPluginResponseCache = require('apollo-server-plugin-response-cache').default;
 const ApolloServerPluginCacheControl = require('apollo-server-core').ApolloServerPluginCacheControl;
@@ -94,3 +93,48 @@ The admin page also provides the CDN cache clearing function. It will clear all 
 # Road map
 - A scheduled cache clearing feature
 - A cache clearing pattern input for CDN cache
+
+# Contributing
+This section covers the way how to configure your environment if you want to contribute to this package.
+
+Setting up the environment
+In order to start making changes in the plugin you first need to install Strapi infrastructure on top of the plugin repository.
+
+```
+npx create-strapi-app --quickstart strapi
+cd strapi
+```
+
+By default Strapi does not create plugins folder so we need to create it.
+```
+mkdir -p src/plugins
+```
+
+Now we should clone this repository so we can work on it.
+```
+git clone https://github.com/10Life/strapi-plugin-advanced-cache-manager.git
+```
+
+Install dependencies:
+```
+npm install
+```
+
+Now we need to register plugin so strapi can use it. In order to do that we need to create (if not already created) `./config/plugins.js` file and add entry to it. (Follow How to use section)
+```
+module.exports = ({ env }) => ({
+  "advanced-cache-manager": {
+    enabled: true,
+    // add this line
+    resolve: "./src/plugins/strapi-plugin-advanced-cache-manager
+    // rest of the configuration
+  },
+});
+```
+
+Rebuild the project and start the server:
+```
+npm run build
+npm run develop
+```
+
