@@ -94,3 +94,47 @@ The admin page also provides the CDN cache clearing function. It will clear all 
 # Road map
 - A scheduled cache clearing feature
 - A cache clearing pattern input for CDN cache
+
+# Contributing
+This section covers the way how to configure your environment if you want to contribute to this package.
+
+Setting up the environment
+In order to start making changes in the plugin you first need to install Strapi infrastructure on top of the plugin repository.
+
+```
+npx create-strapi-app --quickstart strapi
+cd strapi
+```
+
+By default Strapi does not create plugins folder so we need to create it.
+```
+mkdir -p src/plugins
+```
+
+Now we should clone this repository so we can work on it.
+```
+git clone https://github.com/10Life/strapi-plugin-advanced-cache-manager.git
+```
+
+Install dependencies:
+```
+npm install
+```
+
+Now we need to register plugin so strapi can use it. In order to do that we need to create (if not already created) ./config/plugins.js file and add entry to it. (Follow How to use section) Plus the follwing line
+```
+module.exports = ({ env }) => ({
+  "advanced-cache-manager": {
+    enabled: true,
+    resolve: "./src/plugins/advanced-cache-manager"
+    // rest of the configuration
+  },
+});
+```
+
+Rebuild the project and start the server:
+```
+npm run build
+npm run develop
+```
+
