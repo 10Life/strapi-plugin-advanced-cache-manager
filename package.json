@@ -8,6 +8,16 @@
     "kind": "plugin",
     "displayName": "Advanced Cache Manager"
   },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/10Life/strapi-plugin-advanced-cache-manager.git"
+  },
+  "keywords": [
+    "strapi",
+    "cache",
+    "graphql",
+    "cdn"
+  ],
   "files": [
     "admin",
     "server",
