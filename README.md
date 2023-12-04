@@ -22,12 +22,14 @@ To enable GraphQL caching, put the following code in your GraphQL config in `/co
         apolloServer: {
             // use redis for storing cache
             cache: (() => {
+              if (env('REDIS_HOST')) {
                 const redisCache = new RedisCache({
                     host: env('REDIS_HOST'),
                     password: env('REDIS_PASSWORD')
                 });
                 redisCache.cacheType = 'RedisCache';
                 return redisCache;
+              }
             })(),
             plugins: [
               // cache behavior lower age override higher age
